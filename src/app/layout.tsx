@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     images: ["/android-chrome-512x512.png"],
   },
   verification: {
-    yandex: "618f068a8a22265b",
+    yandex: "70305d01a09fd1f0",
     google: "DYO8QzJtRmx1FPalD0cdD7-fRkdkPv59ThNoQIQtk34",
   },
 };
