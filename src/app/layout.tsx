@@ -17,20 +17,59 @@ const ptSans = PT_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://exponiel.ru"),
   title: "Exponiel — Платформа для выставок и деловых поездок",
   description: "Единая система для организаторов и участников: бронирование стендов и билетов, коммуникация, аналитика и планирование командировок.",
-  keywords: ["выставки", "деловые поездки", "бронирование стендов", "B2B", "организаторы выставок", "аналитика выставок"],
+  keywords: [
+    "выставки",
+    "деловые поездки",
+    "бронирование стендов",
+    "B2B",
+    "организаторы выставок",
+    "аналитика выставок",
+    "управление выставками",
+    "expo platform",
+    "business trips",
+  ],
   authors: [{ name: "Exponiel" }],
+  creator: "Exponiel",
+  publisher: "Exponiel",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: "Exponiel — Платформа для выставок и деловых поездок",
-    description: "Единая система для организаторов и участников: бронирование стендов и билетов, коммуникация, аналитика и планирование командировок.",
     type: "website",
     locale: "ru_RU",
+    url: "https://exponiel.ru",
+    siteName: "Exponiel",
+    title: "Exponiel — Платформа для выставок и деловых поездок",
+    description:
+      "Единая система для организаторов и участников: бронирование стендов и билетов, коммуникация, аналитика и планирование командировок.",
+    images: [
+      {
+        url: "/android-chrome-512x512.png",
+        width: 512,
+        height: 512,
+        alt: "Exponiel Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Exponiel — Платформа для выставок и деловых поездок",
     description: "Единая система для организаторов и участников",
+    images: ["/android-chrome-512x512.png"],
+  },
+  verification: {
+    yandex: "618f068a8a22265b",
+    google: "DYO8QzJtRmx1FPalD0cdD7-fRkdkPv59ThNoQIQtk34",
   },
 };
 
@@ -41,8 +80,35 @@ export default function RootLayout({
 }>) {
   const yandexMetrikaId = process.env.NEXT_PUBLIC_YANDEX_METRIKA_ID;
 
+  // JSON-LD структурированные данные для SEO
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Exponiel",
+    description:
+      "Цифровая платформа для выставок и деловых поездок. Единая система для организаторов и участников.",
+    url: "https://exponiel.ru",
+    email: "exponiel@mail.ru",
+    logo: "https://exponiel.ru/apple-touch-icon.png",
+    image: "https://exponiel.ru/android-chrome-512x512.png",
+    sameAs: [],
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "exponiel@mail.ru",
+      contactType: "Customer Service",
+      availableLanguage: ["Russian"],
+    },
+  };
+
   return (
     <html lang="ru">
+      <head>
+        {/* JSON-LD структурированные данные */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${montserrat.variable} ${ptSans.variable} antialiased`}>
         {children}
 
