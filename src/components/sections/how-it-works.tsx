@@ -9,24 +9,32 @@ const steps = [
     icon: Upload,
     title: "Организатор подключает выставку к платформе",
     description: "Быстрая интеграция и настройка выставки в системе",
+    bgColor: "bg-blue-500/10",
+    iconColor: "text-blue-600",
   },
   {
     number: 2,
     icon: Users,
     title: "Участники переходят с сайта выставки или напрямую в Exponiel",
     description: "Удобный доступ через несколько кликов",
+    bgColor: "bg-purple-500/10",
+    iconColor: "text-purple-600",
   },
   {
     number: 3,
     icon: MessageSquare,
     title: "Бронируют стенды или билеты и общаются с менеджерами",
     description: "Прозрачный процесс бронирования и коммуникации",
+    bgColor: "bg-orange-500/10",
+    iconColor: "text-orange-600",
   },
   {
     number: 4,
     icon: BarChart3,
     title: "Организатор управляет процессом и видит аналитику",
-    description: "Полный контроль и insights в реальном времени",
+    description: "Полный контроль и данные в реальном времени",
+    bgColor: "bg-green-500/10",
+    iconColor: "text-green-600",
   },
 ];
 
@@ -56,8 +64,8 @@ export function HowItWorksSection() {
                 className="flex gap-6 mb-12 last:mb-0"
               >
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-full icon-container-bg flex items-center justify-center">
-                    <Icon className="w-8 h-8 icon-color" />
+                  <div className={`w-16 h-16 rounded-full ${step.bgColor} flex items-center justify-center`}>
+                    <Icon className={`w-8 h-8 ${step.iconColor}`} />
                   </div>
                 </div>
                 <div className="flex-1">

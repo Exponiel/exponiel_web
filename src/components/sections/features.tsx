@@ -10,37 +10,49 @@ const features = [
     icon: LayoutGrid,
     title: "Управление выставками",
     description: "Полный контроль над всеми аспектами организации выставки",
-    screenshot: "/screenshots/booth-view.png",
+    screenshot: "/screenshots/exhibition-management.png",
+    bgColor: "bg-blue-500/10",
+    iconColor: "text-blue-600",
   },
   {
     icon: Map,
     title: "Онлайн-карта стендов",
     description: "Интерактивная карта с визуализацией и бронированием стендов",
-    screenshot: "/screenshots/booth-view.png",
+    screenshot: "/screenshots/booth-map.png",
+    bgColor: "bg-red-500/10",
+    iconColor: "text-red-600",
   },
   {
     icon: BarChart3,
     title: "Аналитика по выставкам",
     description: "Детальная статистика, метрики и insights в реальном времени",
     screenshot: "/screenshots/analytics.png",
+    bgColor: "bg-green-500/10",
+    iconColor: "text-green-600",
   },
   {
     icon: Calendar,
     title: "Календарь встреч",
     description: "Планирование и координация деловых встреч на выставке",
     screenshot: "/screenshots/calendar.png",
+    bgColor: "bg-purple-500/10",
+    iconColor: "text-purple-600",
   },
   {
     icon: Search,
     title: "Поиск выставок",
     description: "Удобный поиск и фильтрация выставок по различным критериям",
-    screenshot: "/screenshots/exhibition-search.png",
+    screenshot: "/screenshots/exhibition-search-new.png",
+    bgColor: "bg-cyan-500/10",
+    iconColor: "text-cyan-600",
   },
   {
     icon: Sparkles,
     title: "AI-помощник",
     description: "В перспективе — умный помощник для анализа и рекомендаций",
     screenshot: null,
+    bgColor: "bg-violet-500/10",
+    iconColor: "text-violet-600",
   },
 ];
 
@@ -70,10 +82,12 @@ export function FeaturesSection() {
               >
                 <Card className="p-6 h-full card-glass hover:scale-105 transition-transform duration-300 group">
                   <div className="mb-4">
-                    <div className="w-12 h-12 rounded-lg icon-container-bg flex items-center justify-center mb-4">
-                      <Icon className="w-6 h-6 icon-color" />
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className={`w-12 h-12 rounded-lg ${feature.bgColor} flex items-center justify-center flex-shrink-0`}>
+                        <Icon className={`w-6 h-6 ${feature.iconColor}`} />
+                      </div>
+                      <h3 className="text-xl font-bold">{feature.title}</h3>
                     </div>
-                    <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
                     <p className="text-muted-foreground text-sm mb-4">
                       {feature.description}
                     </p>

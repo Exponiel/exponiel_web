@@ -9,21 +9,29 @@ const reasons = [
     icon: Award,
     title: "Создан на основе реального опыта",
     description: "Мы сами участвовали в выставках и знаем все болевые точки",
+    bgColor: "bg-amber-500/10",
+    iconColor: "text-amber-600",
   },
   {
     icon: TrendingUp,
     title: "Подходит для B2B-мероприятий",
     description: "Специально разработан для отраслевых выставок и деловых событий",
+    bgColor: "bg-green-500/10",
+    iconColor: "text-green-600",
   },
   {
     icon: Puzzle,
     title: "Гибко адаптируется",
     description: "Подстраивается под разные форматы выставок и процессы организаторов",
+    bgColor: "bg-blue-500/10",
+    iconColor: "text-blue-600",
   },
   {
     icon: Shield,
     title: "Не вмешивается в финансовые потоки",
     description: "Организаторы сохраняют полный контроль над своими процессами",
+    bgColor: "bg-orange-500/10",
+    iconColor: "text-orange-600",
   },
 ];
 
@@ -53,8 +61,8 @@ export function WhyExponielSection() {
               >
                 <Card className="p-6 h-full card-glass hover:scale-105 transition-transform duration-300">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full icon-container-bg flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-6 h-6 icon-color" />
+                    <div className={`w-12 h-12 rounded-full ${reason.bgColor} flex items-center justify-center flex-shrink-0`}>
+                      <Icon className={`w-6 h-6 ${reason.iconColor}`} />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-2">{reason.title}</h3>

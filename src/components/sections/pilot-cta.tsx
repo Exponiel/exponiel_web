@@ -23,8 +23,8 @@ export function PilotCTASection() {
             className="text-center mb-12"
           >
             <div className="flex justify-center mb-4">
-              <div className="w-16 h-16 rounded-full icon-container-bg flex items-center justify-center">
-                <Rocket className="w-8 h-8 icon-color" />
+              <div className="w-16 h-16 rounded-full bg-orange-500/10 flex items-center justify-center">
+                <Rocket className="w-8 h-8 text-orange-600" />
               </div>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">

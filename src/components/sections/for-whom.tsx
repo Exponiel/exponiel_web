@@ -6,10 +6,10 @@ import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 
 const organizerFeatures = [
-  "Онлайн-бронирование стендов и билетов",
+  "Управление онлайн-бронированием стендов и билетов",
   "Управление заявками и статусами",
   "Чат с участниками и обмен документами",
-  "Актуальная карта стендов",
+  "Синхронизация задач с календарем",
   "Аналитика по выставке и аудитории",
 ];
 
@@ -47,8 +47,7 @@ export function ForWhomSection() {
                 Для организаторов выставок
               </h3>
               <p className="text-muted-foreground mb-6">
-                Exponiel помогает организаторам управлять всеми процессами участия
-                в выставке в одном интерфейсе.
+                Exponiel упрощает работу организаторов, объединяя все инструменты в одной платформе
               </p>
 
               <ul className="space-y-3 mb-6">
@@ -62,8 +61,8 @@ export function ForWhomSection() {
 
               <div className="relative h-64 rounded-lg overflow-hidden">
                 <Image
-                  src="/screenshots/booth-view.png"
-                  alt="Просмотр стенда"
+                  src="/screenshots/exhibition-management.png"
+                  alt="Управление выставками"
                   fill
                   className="object-cover"
                 />
@@ -102,7 +101,7 @@ export function ForWhomSection() {
 
               <div className="relative h-64 rounded-lg overflow-hidden">
                 <Image
-                  src="/screenshots/exhibition-search.png"
+                  src="/screenshots/exhibition-search-new.png"
                   alt="Поиск выставок"
                   fill
                   className="object-cover"

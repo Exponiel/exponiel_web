@@ -47,9 +47,8 @@ export function ProblemSolutionSection() {
             </h3>
             <ul className="space-y-4">
               {currentProblems.map((problem, index) => (
-                <li key={index} className="flex items-start gap-2 text-muted-foreground">
-                  <X className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
-                  <span>{problem}</span>
+                <li key={index} className="text-muted-foreground">
+                  {problem}
                 </li>
               ))}
             </ul>
@@ -69,9 +68,8 @@ export function ProblemSolutionSection() {
             </h3>
             <ul className="space-y-4">
               {exponielSolutions.map((solution, index) => (
-                <li key={index} className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>{solution}</span>
+                <li key={index}>
+                  {solution}
                 </li>
               ))}
             </ul>
