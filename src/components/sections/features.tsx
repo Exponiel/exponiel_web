@@ -25,7 +25,7 @@ const features = [
   {
     icon: BarChart3,
     title: "Аналитика по выставкам",
-    description: "Детальная статистика, метрики и insights в реальном времени",
+    description: "Детальная статистика, метрики и данные в реальном времени",
     screenshot: "/screenshots/analytics.png",
     bgColor: "bg-green-500/10",
     iconColor: "text-green-600",

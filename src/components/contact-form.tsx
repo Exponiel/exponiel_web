@@ -72,12 +72,12 @@ export function ContactForm() {
       </div>
 
       <div>
-        <Label htmlFor="email">Email *</Label>
+        <Label htmlFor="email">Рабочий Email *</Label>
         <Input
           id="email"
           type="email"
           {...register("email")}
-          placeholder="ваш@email.com"
+          placeholder="ваш@company-email.ru"
           className={`mt-2 ${errors.email ? "border-red-500 focus-visible:ring-red-500" : ""}`}
         />
         {errors.email && (

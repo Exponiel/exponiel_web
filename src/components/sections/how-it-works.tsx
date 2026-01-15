@@ -23,7 +23,7 @@ const steps = [
   {
     number: 3,
     icon: MessageSquare,
-    title: "Бронируют стенды или билеты и общаются с менеджерами",
+    title: "Участники бронируют стенды или билеты и общаются с менеджерами",
     description: "Прозрачный процесс бронирования и коммуникации",
     bgColor: "bg-orange-500/10",
     iconColor: "text-orange-600",
