@@ -5,6 +5,7 @@ Allow: /
 # Yandex
 User-agent: Yandex
 Allow: /
+Host: exponiel.ru
 
 # Google
 User-agent: Googlebot

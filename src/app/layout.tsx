@@ -34,6 +34,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Exponiel" }],
   creator: "Exponiel",
   publisher: "Exponiel",
+  alternates: {
+    canonical: "https://exponiel.ru",
+  },
   robots: {
     index: true,
     follow: true,
