@@ -61,9 +61,12 @@ export function ForWhomSection() {
 
               <div className="relative h-64 rounded-lg overflow-hidden">
                 <Image
-                  src="/screenshots/exhibition-management.png"
+                  src="/screenshots/exhibition-management.webp"
                   alt="Управление выставками"
                   fill
+                  loading="lazy"
+                  quality={65}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>
@@ -101,9 +104,12 @@ export function ForWhomSection() {
 
               <div className="relative h-64 rounded-lg overflow-hidden">
                 <Image
-                  src="/screenshots/exhibition-search-new.png"
+                  src="/screenshots/exhibition-search-new.webp"
                   alt="Поиск выставок"
                   fill
+                  loading="lazy"
+                  quality={65}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>

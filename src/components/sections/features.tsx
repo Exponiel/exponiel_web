@@ -10,7 +10,7 @@ const features = [
     icon: LayoutGrid,
     title: "Управление выставками",
     description: "Полный контроль над всеми аспектами организации выставки",
-    screenshot: "/screenshots/exhibition-management.png",
+    screenshot: "/screenshots/exhibition-management.webp",
     bgColor: "bg-blue-500/10",
     iconColor: "text-blue-600",
   },
@@ -18,7 +18,7 @@ const features = [
     icon: Map,
     title: "Онлайн-карта стендов",
     description: "Интерактивная карта с визуализацией и бронированием стендов",
-    screenshot: "/screenshots/booth-map.png",
+    screenshot: "/screenshots/booth-map.webp",
     bgColor: "bg-red-500/10",
     iconColor: "text-red-600",
   },
@@ -26,7 +26,7 @@ const features = [
     icon: BarChart3,
     title: "Аналитика по выставкам",
     description: "Детальная статистика, метрики и данные в реальном времени",
-    screenshot: "/screenshots/analytics.png",
+    screenshot: "/screenshots/analytics.webp",
     bgColor: "bg-green-500/10",
     iconColor: "text-green-600",
   },
@@ -34,7 +34,7 @@ const features = [
     icon: Calendar,
     title: "Календарь встреч",
     description: "Планирование и координация деловых встреч на выставке",
-    screenshot: "/screenshots/calendar.png",
+    screenshot: "/screenshots/calendar.webp",
     bgColor: "bg-purple-500/10",
     iconColor: "text-purple-600",
   },
@@ -42,7 +42,7 @@ const features = [
     icon: Search,
     title: "Поиск выставок",
     description: "Удобный поиск и фильтрация выставок по различным критериям",
-    screenshot: "/screenshots/exhibition-search-new.png",
+    screenshot: "/screenshots/exhibition-search-new.webp",
     bgColor: "bg-cyan-500/10",
     iconColor: "text-cyan-600",
   },
@@ -99,6 +99,9 @@ export function FeaturesSection() {
                         src={feature.screenshot}
                         alt={feature.title}
                         fill
+                        loading="lazy"
+                        quality={65}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         className="object-cover group-hover:scale-110 transition-transform duration-300"
                       />
                     </div>
