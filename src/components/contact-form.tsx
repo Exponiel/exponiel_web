@@ -11,10 +11,10 @@ import * as z from "zod";
 import { Loader2 } from "lucide-react";
 
 const formSchema = z.object({
-  name: z.string().min(2, "Имя должно содержать минимум 2 символа"),
-  email: z.string().email("Введите корректный email"),
-  company: z.string().min(2, "Название компании обязательно"),
-  message: z.string().min(10, "Сообщение должно содержать минимум 10 символов"),
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Please enter a valid email"),
+  company: z.string().min(2, "Company name is required"),
+  message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -43,7 +43,7 @@ export function ContactForm() {
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.error || "Ошибка при отправке формы");
+        throw new Error(errorData.error || "Error submitting form");
       }
 
       setIsSubmitted(true);
@@ -52,18 +52,18 @@ export function ContactForm() {
       // Reset success message after 5 seconds
       setTimeout(() => setIsSubmitted(false), 5000);
     } catch (error) {
-      setApiError(error instanceof Error ? error.message : "Произошла ошибка при отправке");
+      setApiError(error instanceof Error ? error.message : "An error occurred while submitting");
     }
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       <div>
-        <Label htmlFor="name">Имя *</Label>
+        <Label htmlFor="name">Name *</Label>
         <Input
           id="name"
           {...register("name")}
-          placeholder="Ваше имя"
+          placeholder="Your name"
           className={`mt-2 ${errors.name ? "border-red-500 focus-visible:ring-red-500" : ""}`}
         />
         {errors.name && (
@@ -72,12 +72,12 @@ export function ContactForm() {
       </div>
 
       <div>
-        <Label htmlFor="email">Рабочий Email *</Label>
+        <Label htmlFor="email">Work Email *</Label>
         <Input
           id="email"
           type="email"
           {...register("email")}
-          placeholder="ваш@company-email.ru"
+          placeholder="your@company-email.com"
           className={`mt-2 ${errors.email ? "border-red-500 focus-visible:ring-red-500" : ""}`}
         />
         {errors.email && (
@@ -86,11 +86,11 @@ export function ContactForm() {
       </div>
 
       <div>
-        <Label htmlFor="company">Компания *</Label>
+        <Label htmlFor="company">Company *</Label>
         <Input
           id="company"
           {...register("company")}
-          placeholder="Название вашей компании"
+          placeholder="Your company name"
           className={`mt-2 ${errors.company ? "border-red-500 focus-visible:ring-red-500" : ""}`}
         />
         {errors.company && (
@@ -99,11 +99,11 @@ export function ContactForm() {
       </div>
 
       <div>
-        <Label htmlFor="message">Сообщение *</Label>
+        <Label htmlFor="message">Message *</Label>
         <Textarea
           id="message"
           {...register("message")}
-          placeholder="Расскажите о вашей выставке и интересе к пилотному запуску"
+          placeholder="Tell us about your exhibition and interest in the pilot launch"
           className={`mt-2 min-h-32 ${errors.message ? "border-red-500 focus-visible:ring-red-500" : ""}`}
         />
         {errors.message && (
@@ -126,16 +126,16 @@ export function ContactForm() {
         {isSubmitting ? (
           <>
             <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-            Отправка...
+            Submitting...
           </>
         ) : (
-          "Стать пилотным партнёром"
+          "Become a Pilot Partner"
         )}
       </Button>
 
       {isSubmitted && (
         <p className="text-center text-primary font-medium animate-fade-in">
-          Спасибо! Мы свяжемся с вами в ближайшее время.
+          Thank you! We will contact you shortly.
         </p>
       )}
     </form>

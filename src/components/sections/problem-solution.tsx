@@ -4,19 +4,19 @@ import { motion } from "framer-motion";
 import { X, Check } from "lucide-react";
 
 const currentProblems = [
-  "Стенды — в Excel-файлах",
-  "Коммуникация — через почту и мессенджеры",
-  "Расчёты — вручную",
-  "Документы — в разных письмах",
-  "Аналитика — отсутствует или разрозненная",
+  "Booths managed in Excel spreadsheets",
+  "Communication via email and messengers",
+  "Calculations done manually",
+  "Documents scattered across different emails",
+  "Analytics missing or fragmented",
 ];
 
 const exponielSolutions = [
-  "Интерактивная карта стендов",
-  "Прозрачные цены и статусы заявок",
-  "Чат и документы в одном окне",
-  "Централизованная аналитика",
-  "Понятный процесс для всех сторон",
+  "Interactive booth map",
+  "Transparent pricing and request statuses",
+  "Chat and documents in one window",
+  "Centralized analytics",
+  "Clear process for all parties",
 ];
 
 export function ProblemSolutionSection() {
@@ -29,11 +29,11 @@ export function ProblemSolutionSection() {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold text-center mb-16"
         >
-          Проблема и <span className="text-gradient">решение</span>
+          Problem and <span className="text-gradient">Solution</span>
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* Как сейчас */}
+          {/* Current state */}
           <motion.div
             initial={{ opacity: 0, rotateY: -15 }}
             whileInView={{ opacity: 1, rotateY: 0 }}
@@ -43,7 +43,7 @@ export function ProblemSolutionSection() {
           >
             <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <X className="w-6 h-6 text-destructive" />
-              Как это выглядит сейчас
+              How it looks today
             </h3>
             <ul className="space-y-4">
               {currentProblems.map((problem, index) => (
@@ -54,7 +54,7 @@ export function ProblemSolutionSection() {
             </ul>
           </motion.div>
 
-          {/* Как с Exponiel */}
+          {/* With Exponiel */}
           <motion.div
             initial={{ opacity: 0, rotateY: 15 }}
             whileInView={{ opacity: 1, rotateY: 0 }}
@@ -64,7 +64,7 @@ export function ProblemSolutionSection() {
           >
             <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <Check className="w-6 h-6 text-primary" />
-              Как это работает с Exponiel
+              How it works with Exponiel
             </h3>
             <ul className="space-y-4">
               {exponielSolutions.map((solution, index) => (

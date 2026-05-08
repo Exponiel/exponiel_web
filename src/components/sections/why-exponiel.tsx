@@ -7,29 +7,29 @@ import { Award, TrendingUp, Puzzle, Shield } from "lucide-react";
 const reasons = [
   {
     icon: Award,
-    title: "Создан на основе реального опыта",
-    description: "Мы сами участвовали в выставках и знаем все болевые точки",
+    title: "Built on real experience",
+    description: "We have participated in exhibitions ourselves and know all the pain points",
     bgColor: "bg-amber-500/10",
     iconColor: "text-amber-600",
   },
   {
     icon: TrendingUp,
-    title: "Подходит для B2B-мероприятий",
-    description: "Специально разработан для отраслевых выставок и деловых событий",
+    title: "Designed for B2B events",
+    description: "Specifically developed for industry exhibitions and business events",
     bgColor: "bg-green-500/10",
     iconColor: "text-green-600",
   },
   {
     icon: Puzzle,
-    title: "Гибко адаптируется",
-    description: "Подстраивается под разные форматы выставок и процессы организаторов",
+    title: "Flexible and adaptable",
+    description: "Adapts to different exhibition formats and organizer workflows",
     bgColor: "bg-blue-500/10",
     iconColor: "text-blue-600",
   },
   {
     icon: Shield,
-    title: "Не вмешивается в финансовые потоки",
-    description: "Организаторы сохраняют полный контроль над своими процессами",
+    title: "Does not interfere with financial flows",
+    description: "Organizers retain full control over their processes",
     bgColor: "bg-orange-500/10",
     iconColor: "text-orange-600",
   },
@@ -45,7 +45,7 @@ export function WhyExponielSection() {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold text-center mb-16"
         >
-          Почему <span className="text-gradient">Exponiel</span>
+          Why <span className="text-gradient">Exponiel</span>
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
@@ -82,8 +82,8 @@ export function WhyExponielSection() {
           className="text-center max-w-3xl mx-auto"
         >
           <p className="text-xl text-muted-foreground italic">
-            Exponiel — это не замена организаторам, а инфраструктура, которая
-            упрощает их работу.
+            Exponiel is not a replacement for organizers, but infrastructure that
+            simplifies their work.
           </p>
         </motion.div>
       </div>

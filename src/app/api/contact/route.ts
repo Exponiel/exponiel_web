@@ -6,19 +6,19 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { name, email, company, message } = body;
 
-    // Валидация
+    // Validation
     if (!name || !email || !message) {
       return NextResponse.json(
-        { error: "Все обязательные поля должны быть заполнены" },
+        { error: "All required fields must be filled" },
         { status: 400 }
       );
     }
 
-    // Отправка email
+    // Send email
     await sendContactEmail({
       name,
       email,
-      company: company || "Не указано",
+      company: company || "Not specified",
       message,
     });
 
@@ -26,7 +26,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("Error sending email:", error);
     return NextResponse.json(
-      { error: "Ошибка при отправке сообщения" },
+      { error: "Error sending message" },
       { status: 500 }
     );
   }

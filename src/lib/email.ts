@@ -24,25 +24,25 @@ export async function sendContactEmail({
   const mailOptions = {
     from: process.env.SMTP_FROM_EMAIL,
     to: "bjtuzzova@mail.ru",
-    subject: `Новая заявка от ${name} - Exponiel`,
+    subject: `New inquiry from ${name} - Exponiel`,
     html: `
-      <h2>Новая заявка с сайта Exponiel</h2>
-      <p><strong>Имя:</strong> ${name}</p>
+      <h2>New inquiry from Exponiel website</h2>
+      <p><strong>Name:</strong> ${name}</p>
       <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Компания:</strong> ${company}</p>
-      <p><strong>Сообщение:</strong></p>
+      <p><strong>Company:</strong> ${company}</p>
+      <p><strong>Message:</strong></p>
       <p>${message}</p>
       <hr />
-      <p><small>Отправлено с exponiel.ru</small></p>
+      <p><small>Sent from exponiel.ru</small></p>
     `,
     text: `
-      Новая заявка с сайта Exponiel
+      New inquiry from Exponiel website
 
-      Имя: ${name}
+      Name: ${name}
       Email: ${email}
-      Компания: ${company}
+      Company: ${company}
 
-      Сообщение:
+      Message:
       ${message}
     `,
   };

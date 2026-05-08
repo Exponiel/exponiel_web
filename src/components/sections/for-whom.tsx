@@ -6,19 +6,19 @@ import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 
 const organizerFeatures = [
-  "Управление онлайн-бронированием стендов и билетов",
-  "Управление заявками и статусами",
-  "Чат с участниками и обмен документами",
-  "Синхронизация задач с календарем",
-  "Аналитика по выставке и аудитории",
+  "Online booth and ticket booking management",
+  "Request and status management",
+  "Chat with attendees and document sharing",
+  "Task synchronization with calendar",
+  "Exhibition and audience analytics",
 ];
 
 const participantFeatures = [
-  "Поиск и участие в выставках",
-  "Бронирование стендов и билетов",
-  "Общение с организаторами",
-  "Планирование командировок и встреч",
-  "Хранение документов и истории поездок",
+  "Discover and attend exhibitions",
+  "Book booths and tickets",
+  "Communicate with organizers",
+  "Plan business trips and meetings",
+  "Store documents and travel history",
 ];
 
 export function ForWhomSection() {
@@ -31,7 +31,7 @@ export function ForWhomSection() {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold text-center mb-16"
         >
-          Для кого <span className="text-gradient">Exponiel</span>
+          Who is <span className="text-gradient">Exponiel</span> for
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -44,10 +44,10 @@ export function ForWhomSection() {
           >
             <Card className="p-8 h-full card-glass hover:scale-105 transition-transform duration-300">
               <h3 className="text-2xl font-bold mb-4 text-gradient">
-                Для организаторов выставок
+                For Exhibition Organizers
               </h3>
               <p className="text-muted-foreground mb-6">
-                Exponiel упрощает работу организаторов, объединяя все инструменты в одной платформе
+                Exponiel simplifies organizers&apos; work by bringing all tools into one platform
               </p>
 
               <ul className="space-y-3 mb-6">
@@ -62,7 +62,7 @@ export function ForWhomSection() {
               <div className="relative h-64 rounded-lg overflow-hidden">
                 <Image
                   src="/screenshots/exhibition-management.webp"
-                  alt="Управление выставками"
+                  alt="Exhibition Management"
                   fill
                   loading="lazy"
                   quality={65}
@@ -72,7 +72,7 @@ export function ForWhomSection() {
               </div>
 
               <p className="mt-6 text-sm font-semibold text-accent">
-                Без Excel, бесконечной почты и ручных расчётов.
+                No Excel, endless emails, or manual calculations.
               </p>
             </Card>
           </motion.div>
@@ -86,11 +86,11 @@ export function ForWhomSection() {
           >
             <Card className="p-8 h-full card-glass hover:scale-105 transition-transform duration-300">
               <h3 className="text-2xl font-bold mb-4 text-gradient">
-                Для участников выставок
+                For Exhibition Attendees
               </h3>
               <p className="text-muted-foreground mb-6">
-                Exponiel — это личный кабинет для всех, кто регулярно ездит на
-                выставки и деловые мероприятия.
+                Exponiel is a personal dashboard for anyone who regularly attends
+                exhibitions and business events.
               </p>
 
               <ul className="space-y-3 mb-6">
@@ -105,7 +105,7 @@ export function ForWhomSection() {
               <div className="relative h-64 rounded-lg overflow-hidden">
                 <Image
                   src="/screenshots/exhibition-search-new.webp"
-                  alt="Поиск выставок"
+                  alt="Exhibition Search"
                   fill
                   loading="lazy"
                   quality={65}
@@ -115,7 +115,7 @@ export function ForWhomSection() {
               </div>
 
               <p className="mt-6 text-sm font-semibold text-accent">
-                Все рабочие поездки — в одном месте.
+                All business trips — in one place.
               </p>
             </Card>
           </motion.div>

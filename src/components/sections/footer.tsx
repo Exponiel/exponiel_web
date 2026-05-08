@@ -9,7 +9,7 @@ export function Footer() {
             <span className="text-gradient">Exponiel</span> ©
           </h3>
           <p className="text-muted-foreground mb-4">
-            Цифровая платформа для выставок и деловых поездок
+            Digital platform for exhibitions and business trips
           </p>
           <a
             href="mailto:exponiel@mail.ru"
@@ -18,7 +18,7 @@ export function Footer() {
             exponiel@mail.ru
           </a>
           <p className="text-sm text-muted-foreground mt-6">
-            © {new Date().getFullYear()} Exponiel. Все права защищены.
+            © {new Date().getFullYear()} Exponiel. All rights reserved.
           </p>
         </div>
       </div>

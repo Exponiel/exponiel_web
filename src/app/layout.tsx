@@ -18,16 +18,16 @@ const ptSans = PT_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://exponiel.ru"),
-  title: "Exponiel — Платформа для выставок и деловых поездок",
-  description: "Единая система для организаторов и участников: бронирование стендов и билетов, коммуникация, аналитика и планирование командировок.",
+  title: "Exponiel — Platform for Exhibitions and Business Trips",
+  description: "A unified system for organizers and attendees: booth and ticket booking, communication, analytics, and trip planning.",
   keywords: [
-    "выставки",
-    "деловые поездки",
-    "бронирование стендов",
+    "exhibitions",
+    "business trips",
+    "booth booking",
     "B2B",
-    "организаторы выставок",
-    "аналитика выставок",
-    "управление выставками",
+    "exhibition organizers",
+    "exhibition analytics",
+    "exhibition management",
     "expo platform",
     "business trips",
   ],
@@ -49,12 +49,12 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "ru_RU",
+    locale: "en_US",
     url: "https://exponiel.ru",
     siteName: "Exponiel",
-    title: "Exponiel — Платформа для выставок и деловых поездок",
+    title: "Exponiel — Platform for Exhibitions and Business Trips",
     description:
-      "Единая система для организаторов и участников: бронирование стендов и билетов, коммуникация, аналитика и планирование командировок.",
+      "A unified system for organizers and attendees: booth and ticket booking, communication, analytics, and trip planning.",
     images: [
       {
         url: "/android-chrome-512x512.png",
@@ -66,8 +66,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Exponiel — Платформа для выставок и деловых поездок",
-    description: "Единая система для организаторов и участников",
+    title: "Exponiel — Platform for Exhibitions and Business Trips",
+    description: "A unified system for organizers and attendees",
     images: ["/android-chrome-512x512.png"],
   },
   verification: {
@@ -89,7 +89,7 @@ export default function RootLayout({
     "@type": "Organization",
     name: "Exponiel",
     description:
-      "Цифровая платформа для выставок и деловых поездок. Единая система для организаторов и участников.",
+      "Digital platform for exhibitions and business trips. A unified system for organizers and attendees.",
     url: "https://exponiel.ru",
     email: "exponiel@mail.ru",
     logo: "https://exponiel.ru/apple-touch-icon.png",
@@ -99,14 +99,14 @@ export default function RootLayout({
       "@type": "ContactPoint",
       email: "exponiel@mail.ru",
       contactType: "Customer Service",
-      availableLanguage: ["Russian"],
+      availableLanguage: ["English"],
     },
   };
 
   return (
-    <html lang="ru">
+    <html lang="en">
       <head>
-        {/* JSON-LD структурированные данные */}
+        {/* JSON-LD structured data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -115,7 +115,7 @@ export default function RootLayout({
       <body className={`${montserrat.variable} ${ptSans.variable} antialiased`}>
         {children}
 
-        {/* Яндекс.Метрика */}
+        {/* Yandex.Metrika */}
         {yandexMetrikaId && (
           <>
             <Script

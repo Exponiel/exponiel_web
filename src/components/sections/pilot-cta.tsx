@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 import { Rocket, CheckCircle2 } from "lucide-react";
 
 const pilotBenefits = [
-  "Упростить процессы бронирования",
-  "Получить дополнительную аналитику",
-  "Протестировать новый канал взаимодействия с участниками",
+  "Simplify booking processes",
+  "Gain additional analytics",
+  "Test a new channel for engaging with attendees",
 ];
 
 export function PilotCTASection() {
@@ -28,11 +28,11 @@ export function PilotCTASection() {
               </div>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Мы открыты к <span className="text-gradient">пилотным запускам</span>
+              We are open to <span className="text-gradient">pilot launches</span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              Exponiel находится на стадии MVP. Мы ищем организаторов выставок,
-              готовых протестировать платформу и повлиять на её развитие.
+              Exponiel is at the MVP stage. We are looking for exhibition organizers
+              willing to test the platform and shape its development.
             </p>
           </motion.div>
 
@@ -44,7 +44,7 @@ export function PilotCTASection() {
           >
             <Card className="p-8 card-glass">
               <h3 className="text-2xl font-bold mb-6">
-                Пилотный запуск — это возможность:
+                A pilot launch is an opportunity to:
               </h3>
               <ul className="space-y-3 mb-8">
                 {pilotBenefits.map((benefit, index) => (

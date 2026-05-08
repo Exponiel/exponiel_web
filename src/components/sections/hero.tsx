@@ -25,7 +25,7 @@ export function HeroSection() {
             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
           >
             <span className="text-gradient">Exponiel</span>
-            <span className="text-foreground"> — цифровая платформа для выставок и деловых поездок</span>
+            <span className="text-foreground"> — digital platform for exhibitions and business trips</span>
           </motion.h1>
 
           <motion.p
@@ -34,8 +34,8 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-10 max-w-4xl mx-auto"
           >
-            Единая система для организаторов и участников: бронирование стендов и билетов,
-            коммуникация, аналитика и планирование командировок.
+            A unified system for organizers and attendees: booth and ticket booking,
+            communication, analytics, and trip planning.
           </motion.p>
 
           <motion.div
@@ -49,7 +49,7 @@ export function HeroSection() {
               size="lg"
               className="bg-brand-green hover:bg-brand-green-dark text-white text-lg px-12 py-7 transition-colors font-semibold rounded-full shadow-lg hover:shadow-xl"
             >
-              Стать партнером
+              Become a Partner
             </Button>
           </motion.div>
         </div>
